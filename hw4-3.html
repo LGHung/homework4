@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="show()">Xem danh sach</button>
+    <button onclick="add()">Them hoc sinh</button>
+    <div id="container">
+        <a>Name</a>
+        <input id="addname">
+        <a>code</a>
+        <input id="addcode">
+        <a>mail</a>
+        <input id="addmail">
+        <button onclick="addstu()">Them hoc sinh</button>
+    </div>
+    <script>
+        document.getElementById("container").style.opacity = 0
+        const num = [ 1 , 2 , 3]
+        var word = document.getElementById("showcode")
+        const hocsinh1 = {
+            code : "1",
+            name : "Thomas",
+            mail : "123@gmail.com"
+        }
+        const newstudent = {
+            code : "",
+            name : "",
+            mail : "",
+        }
+        function show(){
+            document.writeln(hocsinh1.code)
+            document.writeln("<br/>")
+            document.writeln(hocsinh1.name)
+            document.writeln("<br/>")
+            document.writeln(hocsinh1.mail)
+            document.writeln("<br/>")
+            document.writeln(newstudent.code)
+            document.writeln("<br/>")
+            document.writeln(newstudent.name)
+            document.writeln("<br/>")
+            document.writeln(newstudent.mail)
+        }
+        function add(){
+            document.getElementById("container").style.opacity = 1
+        }
+        function addstu(){
+            newstudent.code = document.getElementById("addcode").value
+            newstudent.name = document.getElementById("addname").value
+            newstudent.mail = document.getElementById("addmail").value
+            document.getElementById("container").style.opacity = 0
+        }
+    </script>
+</body>
+</html>
